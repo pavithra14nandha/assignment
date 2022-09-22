@@ -1,0 +1,119 @@
+package linkedlist;
+import java.util.*;
+public class AppendElement {
+public static void main(String[] args) {
+	LinkedList<String>colour= new LinkedList<>();
+	//1.append specified elements in linked list
+	colour.add("red");
+	colour.add("green");
+	colour.add("black");
+	colour.add("white1");
+	colour.add("pink");
+    colour.add("yellow");
+  //append specified elements in linked list
+    LinkedList<String>colour1= new LinkedList<>();
+  	colour1.add("red");
+  	colour1.add("green");
+  	colour1.add("black");
+  	colour1.add("white");
+  	colour1.add("pink");
+      colour1.add("yellow");
+    
+    //to print elements in linkedlist
+    System.out.println("Elements in the linkedlist are : "+colour);
+    System.out.println("---------------------------");
+    System.out.println("\t");
+   
+    //2.to print elements using iterator
+    System.out.println("using Iterator : ");
+    System.out.println("----------------");
+    
+Iterator <String> i= colour.iterator();
+   
+	while(i.hasNext())
+	{
+		System.out.println(i.next());
+	}
+	LinkedList<String>c3= new LinkedList<>();
+	for(String z: colour)
+		c3.add(colour1.contains(z)?"yes":"no");
+	System.out.println(c3);
+	//3.to print from specified position using iterator
+	System.out.println("\t");
+	System.out.println("Iterating from specified position :");
+	System.out.println("--------------------------------");
+	
+	Iterator <String> it= colour.listIterator(1);
+	//4.to print the elements in reverse order
+	while(it.hasNext())
+	{
+		System.out.println(it.next());
+	}
+	System.out.println("\t");
+	System.out.println("Reverse order of linked list :");
+	System.out.println("---------------------------");
+	Collections.reverse(colour);
+	//Iterator st = colour.descendingIterator();
+	//while(st.hasNext())
+	//{
+	//	System.out.println(st.next());
+	//}
+	System.out.println(colour);
+	System.out.println("\t");
+	//5.adding element in the specified index
+	System.out.println("Adding element in specified index :");
+	System.out.println("---------------------------");
+	
+		colour.add(2,"blue");
+		System.out.println("after adding at index 2");
+		System.out.println("------------------------");
+		System.out.println(colour);
+		//6. adding element in first and last index
+		colour.addFirst("indigo");
+		colour.addLast("peach");
+		System.out.println("\t");
+		System.out.println("After adding in first and last :");
+		System.out.println("---------------------------");
+		System.out.println(colour);
+		//7. specified element at front of linked list
+		colour.offerFirst("Dark blue");
+		System.out.println("\t");
+		System.out.println("After inserting specified element at the front:");
+		System.out.println("---------------------------");
+		Iterator <String> z= colour.iterator();
+		   
+		while(z.hasNext())
+		{
+			System.out.println(z.next());
+		}
+		//8.specified element at last of linked list
+		colour.addLast("grey");
+		System.out.println("\t");
+		System.out.println("After inserting specified element at the last:");
+		System.out.println("----------------------------------------------");
+		Iterator <String> y= colour.iterator();
+		   
+		while(y.hasNext())
+		{
+			System.out.println(y.next());
+		}
+		//9.insert some elements at specified position at list
+	String string []= {"chiffon","ivory","linen"};
+		Collections.addAll(colour,string);
+		System.out.println("\t");
+		System.out.println("Insert some elements at specified position at list:");
+		System.out.println("----------------------------------------------");
+		Iterator <String> x= colour.iterator();
+		   
+		while(x.hasNext())
+		{
+			System.out.println(x.next());
+		}
+		//10.first and last occurrence
+		System.out.println("\t");
+		System.out.println("Get the first occurrence : "+colour.getFirst());
+		System.out.println("Get the last occurrence : "+colour.getLast());
+		
+	
+}
+}
